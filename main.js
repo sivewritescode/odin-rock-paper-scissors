@@ -27,28 +27,30 @@ let humanScore = 0;
 let computerScore = 0; 
 
 function playRound(humanChoice, computerChoice) {
-  humanChoice = getHumanChoice; 
-  computerChoice = getComputerChoice; 
+  humanChoice = getHumanChoice(); 
+  computerChoice = getComputerChoice(); 
 
-  if (humanChoice.toLowerCase() === "paper" && computerChoice.toLowerCase() === "rock") {
+  if (humanChoice === "Paper" && computerChoice === "Rock") {
     humanScore++; 
     console.log("You win! Paper beats Rock."); 
-  } else if (humanChoice.toLowerCase() === "rock" && computerChoice.toLowerCase() === "paper") {
+  } else if (humanChoice === "Rock" && computerChoice === "Paper") {
     computerScore++; 
     console.log("You lose! Rock beats Paper."); 
-  } else if (humanChoice.toLowerCase() === "scissors" && computerChoice.toLowerCase() === "rock") {
+  } else if (humanChoice === "scissors" && computerChoice === "Rock") {
     computerScore++; 
     console.log("You lose! Rock beats Scissors."); 
-  } else if (humanChoice.toLowerCase() === "rock" && computerChoice.toLowerCase() === "scissors") {
+  } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
     humanScore++; 
     console.log("You win! Rock beats Scissors."); 
-  } else if (humanChoice.toLowerCase() === "paper" && computerChoice.toLowerCase() === "scissors") {
+  } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
     computerScore++; 
     console.log("You lose! Scissors beats Paper."); 
-  } else if (humanChoice.toLowerCase() === "scissors" && computerChoice.toLowerCase() === "paper") {
+  } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
     humanScore++; 
     console.log("You win! Scissors beats Paper."); 
   } else {
     console.log("IT'S A TIE!"); 
   }
 }
+
+playRound(getHumanChoice(), getComputerChoice()); 
