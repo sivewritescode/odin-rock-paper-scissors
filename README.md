@@ -1,1 +1,1 @@
-# odin-rock-paper-scissors
+This is a project about creating the Rock Paper Scissors game, that will be played entirely in the console. 
