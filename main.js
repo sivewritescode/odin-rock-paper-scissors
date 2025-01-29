@@ -22,3 +22,6 @@ function getHumanChoice() {
     return "Invalid input, choose one of the options."; 
   }
 }
+
+let humanScore = 0; 
+let computerScore = 0; 
