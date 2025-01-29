@@ -46,8 +46,10 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
     humanScore++; 
     console.log("You win! Scissors beats Paper."); 
+  } else if (humanChoice === "Invalid input, choose one of the options.") {
+    console.log("Invalid input, round does not count!");  
   } else {
-    console.log("IT'S A TIE!"); 
+    console.log("IT'S A TIE!");
   }
 }
 
