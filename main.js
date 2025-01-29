@@ -53,4 +53,18 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-playRound(getHumanChoice(), getComputerChoice()); 
+function playGame() {
+  for (let i = 1; i <= 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice()); 
+  }
+
+  if (humanScore > computerScore) {
+    alert(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\nYou Win!`); 
+  } else if (computerScore > humanScore) {
+    alert(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\nYou Lose!`);
+  } else if (humanScore === computerScore) {
+    alert(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\nIT'S A TIE!`);
+  }
+}
+
+playGame(); 
