@@ -52,6 +52,13 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+
+  playRound(humanSelection, computerSelection);
+  console.log(`Human Score: ${humanScore}`);
+  console.log(`Computer Score: ${computerScore}\n\n`);
+
   if (humanScore > computerScore) {
     console.log("You won the whole tournament!");
   } else if (humanScore === computerScore) {
