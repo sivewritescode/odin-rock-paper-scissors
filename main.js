@@ -41,8 +41,8 @@ rockButton.addEventListener("click", () => {
 
   playRound("rock", getComputerChoice());
 
-  console.log(`Human Score: ${humanScore}`);
-  console.log(`Computer Score: ${computerScore}\n\n`);
+  humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
+  computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
 });
 
 let paperButton = document.querySelector("#paper");
@@ -50,8 +50,8 @@ paperButton.addEventListener("click", () => {
 
   playRound("paper", getComputerChoice());
 
-  console.log(`Human Score: ${humanScore}`);
-  console.log(`Computer Score: ${computerScore}\n\n`);
+  humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
+  computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
 });
 
 let scissorsButton = document.querySelector("#scissors");
@@ -59,8 +59,10 @@ scissorsButton.addEventListener("click", () => {
 
   playRound("scissors", getComputerChoice());
 
-  console.log(`Human Score: ${humanScore}`);
-  console.log(`Computer Score: ${computerScore}\n\n`);
+  humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
+  computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
 });
 
 let results = document.querySelector("#results");
+let humanScoreDisplay = document.querySelector("#human-score");
+let computerScoreDisplay = document.querySelector("#computer-score");
