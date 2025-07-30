@@ -43,6 +43,16 @@ rockButton.addEventListener("click", () => {
 
   humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
   computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
+
+  if (humanScore === 5) {
+    tournamentWinnerDisplay.textContent = "You won the whole tournament! :)";
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    tournamentWinnerDisplay.textContent = "You lost the tournament! :(";
+    humanScore = 0;
+    computerScore = 0;
+  }
 });
 
 let paperButton = document.querySelector("#paper");
@@ -52,6 +62,16 @@ paperButton.addEventListener("click", () => {
 
   humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
   computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
+
+  if (humanScore === 5) {
+    tournamentWinnerDisplay.textContent = "You won the whole tournament! :)";
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    tournamentWinnerDisplay.textContent = "You lost the tournament! :(";
+    humanScore = 0;
+    computerScore = 0;
+  }
 });
 
 let scissorsButton = document.querySelector("#scissors");
@@ -61,8 +81,19 @@ scissorsButton.addEventListener("click", () => {
 
   humanScoreDisplay.textContent = `Human Score: ${humanScore}`;
   computerScoreDisplay.textContent = `Computer Score: ${computerScore}\n\n`;
+
+  if (humanScore === 5) {
+    tournamentWinnerDisplay.textContent = "You won the whole tournament! :)";
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    tournamentWinnerDisplay.textContent = "You lost the tournament! :(";
+    humanScore = 0;
+    computerScore = 0;
+  }
 });
 
 let results = document.querySelector("#results");
 let humanScoreDisplay = document.querySelector("#human-score");
 let computerScoreDisplay = document.querySelector("#computer-score");
+let tournamentWinnerDisplay = document.querySelector("#tournament-winner");
